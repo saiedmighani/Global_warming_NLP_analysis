@@ -27,7 +27,8 @@ The import, data process, as well as modeling and visualizatons were all perform
 ```
 project-global_warming_NLP
     
-|__ code/
+|__ assets/
+|__ codes/
 |   |__ P01_API_requests.ipynb  
 |   |__ P02_data_cleaning.ipynb 
 |   |__ P03_EDA_nlp.ipynb   
