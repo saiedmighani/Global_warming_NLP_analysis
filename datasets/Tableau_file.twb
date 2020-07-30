@@ -1,0 +1,627 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0614.2338                               -->
+<workbook original-version='18.1' source-build='2020.2.2 (20202.20.0614.2338)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='fortableau' inline='true' name='federated.1b17ypg1nengrg15kvc2f0iuuznu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fortableau' name='textscan.0ton63o1s1nd761d3cuxl0huug11'>
+            <connection class='textscan' directory='/Users/smighani/Documents/Database_repository/Github/Global_warming_NLP_analysis/datasets' filename='fortableau.csv' password='' port='0' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0ton63o1s1nd761d3cuxl0huug11' name='fortableau.csv' table='[fortableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='datetime' name='date' ordinal='0' />
+            <column datatype='string' name='author' ordinal='1' />
+            <column datatype='integer' name='created_utc' ordinal='2' />
+            <column datatype='string' name='id' ordinal='3' />
+            <column datatype='integer' name='num_comments' ordinal='4' />
+            <column datatype='integer' name='over_18' ordinal='5' />
+            <column datatype='string' name='post_hint' ordinal='6' />
+            <column datatype='integer' name='score' ordinal='7' />
+            <column datatype='real' name='subreddit_subscribers' ordinal='8' />
+            <column datatype='string' name='text_merged' ordinal='9' />
+            <column datatype='string' name='subreddit' ordinal='10' />
+            <column datatype='integer' name='text_char_count' ordinal='11' />
+            <column datatype='integer' name='text_word_count' ordinal='12' />
+            <column datatype='real' name='sentiment_score' ordinal='13' />
+            <column datatype='integer' name='target' ordinal='14' />
+            <column datatype='real' name='wua' ordinal='15' />
+            <column datatype='integer' name='token_count' ordinal='16' />
+            <column datatype='integer' name='token_count_cum' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0ton63o1s1nd761d3cuxl0huug11' name='fortableau.csv' table='[fortableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='datetime' name='date' ordinal='0' />
+            <column datatype='string' name='author' ordinal='1' />
+            <column datatype='integer' name='created_utc' ordinal='2' />
+            <column datatype='string' name='id' ordinal='3' />
+            <column datatype='integer' name='num_comments' ordinal='4' />
+            <column datatype='integer' name='over_18' ordinal='5' />
+            <column datatype='string' name='post_hint' ordinal='6' />
+            <column datatype='integer' name='score' ordinal='7' />
+            <column datatype='real' name='subreddit_subscribers' ordinal='8' />
+            <column datatype='string' name='text_merged' ordinal='9' />
+            <column datatype='string' name='subreddit' ordinal='10' />
+            <column datatype='integer' name='text_char_count' ordinal='11' />
+            <column datatype='integer' name='text_word_count' ordinal='12' />
+            <column datatype='real' name='sentiment_score' ordinal='13' />
+            <column datatype='integer' name='target' ordinal='14' />
+            <column datatype='real' name='wua' ordinal='15' />
+            <column datatype='integer' name='token_count' ordinal='16' />
+            <column datatype='integer' name='token_count_cum' ordinal='17' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>author</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[author]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>author</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_utc</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[created_utc]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>created_utc</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_comments</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_comments]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>num_comments</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>over_18</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[over_18]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>over_18</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>post_hint</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[post_hint]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>post_hint</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[score]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>score</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subreddit_subscribers</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[subreddit_subscribers]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>subreddit_subscribers</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_merged</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[text_merged]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>text_merged</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subreddit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[subreddit]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>subreddit</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_char_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[text_char_count]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>text_char_count</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_word_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[text_word_count]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>text_word_count</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sentiment_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sentiment_score]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>sentiment_score</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>target</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[target]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>target</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wua</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wua]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>wua</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>token_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[token_count]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>token_count</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>token_count_cum</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[token_count_cum]</local-name>
+            <parent-name>[fortableau.csv]</parent-name>
+            <remote-alias>token_count_cum</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='fortableau.csv' datatype='table' name='[__tableau_internal_object_id__].[fortableau.csv_4223AF59148A4CEFA65F828E4F07468B]' role='measure' type='quantitative' />
+      <column caption='Author' datatype='string' name='[author]' role='dimension' type='nominal' />
+      <column caption='Created Utc' datatype='integer' name='[created_utc]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Num Comments' datatype='integer' name='[num_comments]' role='measure' type='quantitative' />
+      <column caption='Over 18' datatype='integer' name='[over_18]' role='measure' type='quantitative' />
+      <column caption='Post Hint' datatype='string' name='[post_hint]' role='dimension' type='nominal' />
+      <column caption='Score' datatype='integer' name='[score]' role='measure' type='quantitative' />
+      <column caption='Sentiment Score' datatype='real' name='[sentiment_score]' role='measure' type='quantitative' />
+      <column caption='Subreddit' datatype='string' name='[subreddit]' role='dimension' type='nominal' />
+      <column caption='Subreddit Subscribers' datatype='real' name='[subreddit_subscribers]' role='measure' type='quantitative' />
+      <column caption='Target' datatype='integer' name='[target]' role='measure' type='quantitative' />
+      <column caption='Text Char Count' datatype='integer' name='[text_char_count]' role='measure' type='quantitative' />
+      <column caption='Text Merged' datatype='string' name='[text_merged]' role='dimension' type='nominal' />
+      <column caption='Text Word Count' datatype='integer' name='[text_word_count]' role='measure' type='quantitative' />
+      <column caption='Token Count' datatype='integer' name='[token_count]' role='measure' type='quantitative' />
+      <column caption='Token Count Cum' datatype='integer' name='[token_count_cum]' role='measure' type='quantitative' />
+      <column caption='Wua' datatype='real' name='[wua]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fortableau.csv' id='fortableau.csv_4223AF59148A4CEFA65F828E4F07468B'>
+            <properties context=''>
+              <relation connection='textscan.0ton63o1s1nd761d3cuxl0huug11' name='fortableau.csv' table='[fortableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='datetime' name='date' ordinal='0' />
+                  <column datatype='string' name='author' ordinal='1' />
+                  <column datatype='integer' name='created_utc' ordinal='2' />
+                  <column datatype='string' name='id' ordinal='3' />
+                  <column datatype='integer' name='num_comments' ordinal='4' />
+                  <column datatype='integer' name='over_18' ordinal='5' />
+                  <column datatype='string' name='post_hint' ordinal='6' />
+                  <column datatype='integer' name='score' ordinal='7' />
+                  <column datatype='real' name='subreddit_subscribers' ordinal='8' />
+                  <column datatype='string' name='text_merged' ordinal='9' />
+                  <column datatype='string' name='subreddit' ordinal='10' />
+                  <column datatype='integer' name='text_char_count' ordinal='11' />
+                  <column datatype='integer' name='text_word_count' ordinal='12' />
+                  <column datatype='real' name='sentiment_score' ordinal='13' />
+                  <column datatype='integer' name='target' ordinal='14' />
+                  <column datatype='real' name='wua' ordinal='15' />
+                  <column datatype='integer' name='token_count' ordinal='16' />
+                  <column datatype='integer' name='token_count_cum' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fortableau' name='federated.1b17ypg1nengrg15kvc2f0iuuznu' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1b17ypg1nengrg15kvc2f0iuuznu'>
+            <column caption='Num Comments' datatype='integer' name='[num_comments]' role='measure' type='quantitative' />
+            <column caption='Score' datatype='integer' name='[score]' role='measure' type='quantitative' />
+            <column caption='Sentiment Score' datatype='real' name='[sentiment_score]' role='measure' type='quantitative' />
+            <column-instance column='[num_comments]' derivation='Sum' name='[sum:num_comments:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[score]' derivation='Sum' name='[sum:score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sentiment_score]' derivation='Sum' name='[sum:sentiment_score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:sentiment_score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:score:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:num_comments:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>([federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:sentiment_score:qk] + ([federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:score:qk] + [federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:num_comments:qk]))</rows>
+        <cols>([federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:sentiment_score:qk] + ([federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:score:qk] + [federated.1b17ypg1nengrg15kvc2f0iuuznu].[sum:num_comments:qk]))</cols>
+      </table>
+      <simple-id uuid='{4671C062-1715-4CAB-ABA7-C1F007DE962A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FD14B05C-B829-4FFE-83B4-BB6A87B5D201}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      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
+      igAAAJf6/7g8q9GgHitUAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
