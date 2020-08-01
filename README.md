@@ -85,7 +85,14 @@ A handful of classification models were run on the train/test split dataset, and
 
 |Model|Variables|Accuracy|Precision|Recall|Overfitting(variance - bias)|
 |---|---|---|---|---|---|
-|Logisitc Regression|cvet text|0.96|0.96|0.97|0.02|
+|Logistic Regression|cvec text|0.97|0.98|0.96|0.02|
+|Naïve Bayes|cvec text|0.93|0.96|0.91|0.02|
+|Naïve Bayes|tf-idf text|0.95|0.98|0.92|0.02|
+|Random Forest|cvec text|0.98|0.99|0.96|0.02|
+|Extra trees|cvec text|0.98|0.99|0.97|0.02|
+|Gboost|cvec text|0.97|0.99|0.95|0.02|
+|Neural network|cvec text|0.88|0.99|0.76|0.02|
+|SVM|cvec text|0.96|0.99|0.94|0.03|
 ====
 
     
