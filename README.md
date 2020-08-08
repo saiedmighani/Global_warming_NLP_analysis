@@ -9,16 +9,16 @@ Please read the full story at the following published Medium blog post:
 
 - ### Project Statement
 
-Although the recent alarming observations as a direct consequence of human manipulations have proven climate change as a [scientific fact](https://science.sciencemag.org/content/306/5702/1686/), there remains a long way to direct our concerns towards political actions to rescue the future of our planet and the generations to come. Hence, an imminent way to remedy these impacts to save our planet is to look no further than our human species. For any policy to take place, we need to assess the social awareness, current political debates, in any form.
+Although recent alarming observations as a direct consequence of human manipulations have proven global warming as a [scientific fact](https://science.sciencemag.org/content/306/5702/1686/), there remains a long way to direct our concerns towards political actions to rescue the future of our planet and the generations to come. Hence, an imminent way to remedy these impacts to save our planet is to look no further than our human species. For any policy to take place, we need to assess the social awareness, current political debates, in any form.
 
 As social media form a major means of our daily conversations and interactions, they bear meaningful insights towards the current state of narratives. Contents are being generated online, on a daily basis, by many of us around the globe. Having a closer look into these contents may help us have a more holistic understanding of the roots of the current state of debate, or whether the designed policies have been effective.
 
-By mining into the social media content, to be specific Reddit, we analzyed these debates and the current state of opinion. Although the societal representativeness of the reddit users remains a matter of debate, it could be a good proxy, and a good starting point, to look into this debate. I used natural language processing (NLP) workflow along with machine learning algorithms to better understand the contents.
+By mining into the social media content, to be specific Reddit, I analzyed these debates and the current state of opinion. Although the societal representativeness of the reddit users remains a matter of debate, it could be a good proxy, and a good starting point, to look into this debate. I used natural language processing (NLP) workflow along with machine learning to better understand the content.
 <br>
 
 - ### Problem statement
 ---
-The reddit users in **[Globalwarming]** subreddit were in general concerned, while the subreddit users in **[Conspiracytheory]** reddit were more interested in coming up with conspiracy theories. This contrasting viewpoint may be a good binary target for our NLP analysis, to develop a trained model.
+The reddit users in **[Globalwarming](https://www.reddit.com/r/GlobalWarming/)** subreddit were in general concerned, while the subreddit users in **[Conspiracytheory](https://www.reddit.com/r/ConspiracyTheory/)** reddit were more interested in coming up with conspiracy theories. This contrasting viewpoint may be a good binary target for our NLP analysis, to develop a trained model.
 
 ---
 
@@ -44,7 +44,7 @@ project-global_warming_NLP
 |__ README.md
 ```
 
-The project was first run on a small dataset of only 50 imported posts, at the production stage, it was run on 20,000 posts.
+The project was first run on a small dataset of only 500 imported posts, at the production stage, it was run on 10,000 posts.
 
 ---
 
@@ -52,29 +52,28 @@ The project was first run on a small dataset of only 50 imported posts, at the p
     
 ### <span style="color: green">Step 1 - Data collection
     
-I wrote a python function to get subreddits through API push shift. Below is a code excerpt (again, I invite you to visit my personal GitHub repository for complete code set): <br> <br>
-    Then, using this function, I imported APIs from two "global warming" (link) and conspiracy theory subreddits. The imported posts date before July 1, 2020. Then, merged the two dataset as a pandas dataframe and saved them to CSV files.
+I wrote a python function to pull subreddits through API push shift.
+    Then, using this function, I imported posts from two global warming and conspiracy theory subreddits. The imported posts date before July 1, 2020. Then, merged the two dataset as a pandas dataframe and saved them to CSV files.
 
 ---    
     
 ### <span style="color: green">Step 2 - Data cleaning
-As expected from the unstructured text data, data cleaning is a labor-intensive part of any NLP projects. To keep this readme simple and easy to read, here I just enumerate the cleaning procedures with respect to performance sequence: removing all non-letter characters, string operations, removing stopwords, stemming, and finally stitching back the result back into the data frame and saving it as a CSV file.
+As expected from the unstructured text data, data cleaning is a labor-intensive part of any NLP project. To keep this Readme simple and easy to read, here I just enumerate the cleaning procedures with respect to performance sequence: removing all non-letter characters, string operations, removing stopwords, stemming, and finally stitching back the result back into the data frame and saving it as a CSV file.
     
 ---
 ### <span style="color: green"> Step 3 - EDA
     
-This step is the fun part after all those labor-intensive data preparation. 
-During exploring the original data frame, I also engineered and added the following features to the data frame for further modeling:<br><br>
-1- Character counts, word count.<br><br>
+This step is the fun part after all those labor-intensive data preparation. During exploring the original data frame, I also engineered and added the following features to the data frame for further modeling:<br><br>
+1- Character count, word count.<br><br>
 2- Sentiment score<br><br>
-3- And, I added a new engineer feature and called it word use aggression (WUA). This feature is simply Euclidean distance between the 100 top-ranked features from an initial modeling result (using linear regression to infer most-influencing variables). it is simply the word distance between each top-ranked words, summing over all top-rank words.<br>
+3- And, I added a new engineered feature and called it word use aggression (WUA). This feature is simply Euclidean distance between the 100 top-ranked features from an initial modeling result (using linear regression to infer most-influencing variables). it is simply the word distance between each top-ranked words, summing over all top-rank words.<br>
     
 [WUA] = sum(|distance between top-word indices|) <br>
 
 Of course, this new feature can be re-factored into more interesting formats such as unstructured graphs. However, being able to insert a simple value back into the data frame was an attractive choice for me.<br>
 
     
-During EDA, I found that score, sentiment score, document word count, and character length were the most correlated variables to the target class. also for the positive documents, the score was directly correlated with character length. While, for negative comment, it was neutral. That suggests the people who were concerned, tended to show their concern through longer messages.<br>
+During EDA, I found that for global warming posts, the score was directly correlated with character length. While, for negative comments, it was neutral. That suggests the people who were concerned, tended to show their concern through longer messages.<br>
     
 <div style="text-align:center"><img src="plots/EDA_sent_score.png" /></div>
 
@@ -103,7 +102,12 @@ A handful of classification models were run on the train/test split dataset, and
 I picked stemming over lemmatization, as it seemed more intuitive to me to reduce the features. Below is the confusion matrix for the best model we developed:
 <div style="text-align:center"><img src="plots/Confusion.png" /></div>
 
+### <span style="color: green">Model Discussion
     
+
+Stemming the words, and using TF-IDF vectorizer rather than CountVectorizer helped the accuracy to a limited extent (by maximum 3%). Among several tested classification models, they had precision values higher than 96% and Recall values higher than 92% on test set.
+
+Also, the models seemed to be slightly overfit (<2%). From the text vectorizers, tf-idf seemed to be faster and resulted in better scores. Also, random forest gave the best results. As a next stage in the modeling, I decided to also take the numerical features into consideration. Hence, I chose Logistic Regression model to proceed with as it provides a better sense on the feature importance and how much they contribute to the model. It also allows us to test our engineered numeric features. Next section focuses on the text-numerics combined feature model using Logistic Regression.    
 
 
 ### <span style="color: green">Step 5 - Evaluation and Conceptual Understanding
@@ -124,13 +128,11 @@ In the following, we show the word use per year, it seems that the world is gett
 However, the conspiracies also raised:
 <div style="text-align:center"><img src="plots/Word_use_low.png" /></div>
 
+### <span style="color: green"> Model testing on new dataset
+       
     
-
-Finally, to test whether we are production-ready, we tested the dataset on a new test dataset: climate change.<br>
     
-Climate change is over-arching to the global warming
-    
-Fed 50 "climatechange" subreddit posts to separate the global warmings from other topics.
+Finally, to test model performance on new dataset, we tested the model on a new test dataset: climate change.[Climate change](https://www.reddit.com/r/climatechange/) is over-arching to the global warming issue. Then, I fed 100 "climatechange" subreddit posts to filter the global warming topics from other topics.
 
     
 Example of filtered as non-global warming:
@@ -140,8 +142,8 @@ Example of filtered as non-global warming:
 ### <span style="color: green">Final recommendation points
     
     
-- The society seems to have been more aware towards global warming since 2018.
-
-- However, we need to beware of the media that feeds conspiracy to people, as it also raised.
-
-- The current model seems to be able to filter the global warming subjects.
+Based on the presented workflow in this project, we observed how NLP and also numerical features can help us classify the target posts, to infer the current narrative. A few implications were:<br><br>
+1- We found the most/least correlated words in determining whether a post is concerned with global warming.<br>
+2- Through a few engineered numerical features, we can find a better correlation with the target label.<br>
+3- We observed the recent time-series trend to understand the recent narrative trends. There seems to be an increasing trend in both concerns and conspiracies since 2019.<br>
+4- We were able to filter the global warming subjects from a more general climate change subreddit.
