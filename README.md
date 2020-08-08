@@ -7,7 +7,7 @@ Please read the full story at the following published Medium blog post:
 [Link](https://towardsdatascience.com/global-warming-and-the-narrative-around-it-lessons-learned-from-nlp-exploration-of-reddit-posts-fb2918d500e9)
 <br>
 
-- ### Project Statement
+- ### Project Goal
 
 Although recent alarming observations as a direct consequence of human manipulations have proven global warming as a [scientific fact](https://science.sciencemag.org/content/306/5702/1686/), there remains a long way to direct our concerns towards political actions to rescue the future of our planet and the generations to come. Hence, an imminent way to remedy these impacts to save our planet is to look no further than our human species. For any policy to take place, we need to assess the social awareness, current political debates, in any form.
 
@@ -18,7 +18,7 @@ By mining into the social media content, to be specific Reddit, I analzyed these
 
 - ### Problem statement
 ---
-The reddit users in **[Globalwarming](https://www.reddit.com/r/GlobalWarming/)** subreddit were in general concerned, while the subreddit users in **[Conspiracytheory](https://www.reddit.com/r/ConspiracyTheory/)** reddit were more interested in coming up with conspiracy theories. This contrasting viewpoint may be a good binary target for our NLP analysis, to develop a trained model.
+The reddit users in **[Globalwarming](https://www.reddit.com/r/GlobalWarming/)** subreddit were in general concerned, while the subreddit users in **[Conspiracytheory](https://www.reddit.com/r/ConspiracyTheory/)** reddit were more interested in coming up with conspiracy theories. This contrasting viewpoint may be a good binary target for our NLP analysis, to develop a trained NLP model.
 
 ---
 
