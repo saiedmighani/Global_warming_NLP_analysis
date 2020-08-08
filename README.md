@@ -70,7 +70,7 @@ This step is the fun part after all those labor-intensive data preparation. Duri
     
 3- Added a new engineered feature and called it word use aggression (WUA). This feature is simply Euclidean distance between the 100 top-ranked features from an initial modeling result (using linear regression to infer most-influencing variables). it is simply the word distance between each top-ranked words, summing over all top-rank words.<br>
     
-[WUA] = sum(|distance between top-word indices|) <br>
+'[WUA] = sum(|distance between top-word indices|)' <br>
 
 Of course, this new feature can be re-factored into more interesting formats such as unstructured graphs. However, being able to insert a simple value back into the data frame was an attractive choice for me.<br>
 
@@ -80,7 +80,7 @@ During EDA, I came across a relation between Reddit scores and the number of com
 
     
 Hence, I engineered an interaction feature as a multiplication of comments and scores and named it “reaction” as it is the number of comments and scores altogether, which are both reader’s reaction to the writer:<br><br>
-[reaction] = [post score] * [number of comments]<br>
+'[reaction] = [post score] * [number of comments]'<br>
     
 
 Finally, I vectorized the text, making it production-ready to be fed into models...
