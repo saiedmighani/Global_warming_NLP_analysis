@@ -2,6 +2,9 @@
 
 # The Global Warming issue and Narratives around it: 
 ## NLP analysis of Reddit users
+
+Please read the full story at the following published Medium blog post:
+[Link](https://towardsdatascience.com/global-warming-and-the-narrative-around-it-lessons-learned-from-nlp-exploration-of-reddit-posts-fb2918d500e9)
 <br>
 
 - ### Project Statement
