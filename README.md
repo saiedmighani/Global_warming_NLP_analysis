@@ -19,7 +19,7 @@ By mining into the social media content, to be specific Reddit, I analzyed these
 - ### Problem statement
 ---
 The Reddit users in **[Globalwarming](https://www.reddit.com/r/GlobalWarming/)** subreddit were in general concerned, while the subreddit users in **[Conspiracytheory](https://www.reddit.com/r/ConspiracyTheory/)** reddit were more interested in coming up with conspiracy theories. This contrasting viewpoint may be a good binary target for our NLP analysis, to develop a trained NLP model. The main question to answer is:<br><br>
-<i>**Can my trained classification model discern the global warming topics (as target)?**<i/>
+<i>**Can my trained classification model discern the global warming topics (as target)?**</i>
 
 ---
 
