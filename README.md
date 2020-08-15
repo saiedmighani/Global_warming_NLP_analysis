@@ -48,9 +48,10 @@ project-global_warming_NLP
 The project was first run on a small dataset of only 500 imported posts, at the production stage, it was run on 10,000 posts.
 
 ---
-
+### <span style="color: green">- *Instructions for running and reproducing the model results*
+After cloning the repository, run the notebooks (under "codes/" directory) with the sequence that is laid out in the above project directory table. The figures will be automatically saved into "plots/" directory.     
   
-    
+---    
 ### <span style="color: green">Step 1 - Data collection
     
 I wrote a python function to pull subreddits through API push shift.
